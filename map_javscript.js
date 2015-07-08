@@ -1,41 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
-    <meta charset="utf-8">
-    <title>Dynamic Canoe Nationals Map</title>
-    <style>
-      html, body, #map-canvas {
-        height: 100%;
-        margin: 0px;
-        padding: 0px
-      }
-      #legend {
-    font-family: Helvetica;color: #FFD900;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    margin: 9px;
-    border: 1px solid #FFD900;      }
-    .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
- 
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-    </style>
-    <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    
-    <script>
+
     
 function initialize() {
 
@@ -175,35 +138,4 @@ var zoom = map.getZoom();
   
 }
 google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-  </head>
-  <body> 
-    <div id="map-canvas">
-    
-    </div>
-    <audio src="trimmed_s.m4a" autoplay >
-<p>Your browser does not support the audio element </p>
-</audio>
-</embed>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="http://www.jacklmoore.com/colorbox/jquery.colorbox.js"></script>
-    <script>
-      function openColorBox(){
-        $.colorbox({iframe:true, width:"80%", height:"80%", href: "http://www.isaac26.com/uploads/iframed.html"});
-      }
-      
-      function countDown(){
-        seconds--
-        $("#seconds").text(seconds);
-        if (seconds === 0){
-          openColorBox();
-          clearInterval(i);
-        }
-      }
-
-      var seconds = 2,
-          i = setInterval(countDown, 1000);
-    </script>
-    <p> Disclaimer: All information on this map, including (but not limited to) descriptions of rapids, gauges and levels, directions, and weather, is subject to change without notice. Like a guidebook, these pages are intended as a service to the paddling community and should never be viewed as a substitute for careful river-reading, scouting, and assessment of skills. PaddleSoft cannot be held liable for any of the information provided.  </p>
-  </body> 
-</html>
+     
