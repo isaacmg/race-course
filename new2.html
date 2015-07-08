@@ -16,6 +16,21 @@
     padding: 10px;
     margin: 9px;
     border: 1px solid #FFD900;      }
+    .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
     </style>
     <link rel="stylesheet" href="http://www.jacklmoore.com/colorbox/example1/colorbox.css" />
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
@@ -33,14 +48,14 @@ function initialize() {
   
   //Info Window Content 
   
-  var greatWorksInfo = ' <h1> Great Works <h1> <h3> An overview </h3> <p> Great Works is one of the three large rapids on the Penobscot course. The rapid has many lines that vary in difficulty. Click on one of the markers to learn more about a specific line. </p> <iframe width="640" height="360" src="https://www.youtube.com/embed/FdQ6TCmHE1I?rel=0" frameborder="0" allowfullscreen></iframe>'; 
+  var greatWorksInfo = ' <h1> Great Works <h1> <h3> An overview </h3> <p> Great Works is one of the three large rapids on the Penobscot course. The rapid has many lines that vary in difficulty. Click on one of the markers to learn more about a specific line. </p> <div class="video-container"> <iframe width="640" height="360" src="https://www.youtube.com/embed/FdQ6TCmHE1I?rel=0" frameborder="0" allowfullscreen></iframe> </div>'; 
   var basinInfo = '<p> <h1> Basin Rapid </h1> <h3> An overview  </h3> <p> Basin Rapid is the second of the three large rapids on the Penobscot.  <iframe width="560" height="315" src="https://www.youtube.com/embed/9tbU6s_JLiQ?autoplay=1" frameborder="0" allowfullscreen></iframe> <p>'; 
-  var veazieInfo = '<p> <h1> Veazie Rapids </h1> </p> <h3> An Overview </h3> The Veazie rapids are a long (approximately 790 yard) section of whitewater and quick water. Please note that the Google Map is not an accurate depiction of the rapids as the dam was removed last year. More information coming soon! </p> <p> <iframe width="640" height="480" src="https://www.youtube.com/embed/HbEdeET7nvE?rel=0" frameborder="0" allowfullscreen></iframe></p> <img alt="Veazie Right Line" src="http://www.isaac26.com/uploads/veazieright.jpg" height="300" width="400"> </img>';
+  var veazieInfo = '<p> <h1> Veazie Rapids </h1> </p> <h3> An Overview </h3> The Veazie rapids are a long (approximately 790 yard) section of whitewater and quick water. Please note that the Google Map is not an accurate depiction of the rapids as the dam was removed last year. More information coming soon! </p> <p> <div class="video-container"> <iframe width="640" height="480" src="https://www.youtube.com/embed/HbEdeET7nvE?rel=0" frameborder="0" allowfullscreen></iframe> </div></p> <img alt="Veazie Right Line" src="http://www.isaac26.com/uploads/veazieright.jpg" height="300" width="400"> </img>';
   var frenchInfo = '<p> <b> French Island Rapid </b> The first rapid on the race course. More information coming soon! <p>';
-  var gRightInfo = '<p> <b> Great Works Right Lines </b> <p> The right lines are generally both bigger and tougher than the left lines. </p> <iframe width="560" height="315" src="https://www.youtube.com/embed/AoxSLrcRPxc?rel=0" frameborder="0" allowfullscreen></iframe>';
+  var gRightInfo = '<p> <b> Great Works Right Lines </b> <p> The right lines are generally both bigger and tougher than the left lines. </p> <div class="video-container">  <iframe width="560" height="315" src="https://www.youtube.com/embed/AoxSLrcRPxc?rel=0" frameborder="0" allowfullscreen></iframe> </div>';
   var gCentInfo = '<p>  <b> Great Works Center Lines </b>  <p> <p> Coming soon!! </p> <p> If you have videos/photos/descriptions of the center lines please send them to igodfried@isaac26.com. You will be listed as the photo/video/description provider . </p>  ';
-  var baseCent = '<p> <b> The Center Lines </b> </p>  <a target="_blank href="http://www.isaac26.com/uploads/cr.jpg"> <img src="http://www.isaac26.com/uploads/cr.jpg" height=224 width=300> </a> <iframe width="390" height="219" src="https://www.youtube.com/embed/Wsr3nI0Crig?rel=0" frameborder="0" allowfullscreen></iframe> <p>';
-  var gLeftInfo = '<p> <div style="width: 100%; display: table;"> <div style="display: table-row">  <div style="width: 600px; display: table-cell;"> <b> The (main) Left Channel </b>    <a target="_blank" href="http://www.isaac26.com/uploads/leftside.jpg" > <img src="http://www.isaac26.com/uploads/leftside.jpg" height=225 width=300> </img>  </a>   </div> <div style="display: table-cell;">  <b> The far left channel  </b> <div> <iframe width="350" height="198" src="https://www.youtube.com/embed/y0MflUM7vyE?rel=0&t=03s" frameborder="0" allowfullscreen></iframe></div> <div> The far left channel can generally be run at medium to high flows with some rock dodging and bracing (5+ ft on the Eddington gage). However, lower then 5ft and it becomes very difficult for larger boats to navigate down.     </div> </div> </div>  <p>';
+  var baseCent = '<p> <b> The Center Lines </b> </p>  <a target="_blank href="http://www.isaac26.com/uploads/cr.jpg"> <img src="http://www.isaac26.com/uploads/cr.jpg" height=224 width=300> </a> <div class="video-container"> <iframe width="390" height="219" src="https://www.youtube.com/embed/Wsr3nI0Crig?rel=0" frameborder="0" allowfullscreen></iframe> </div> <p>';
+  var gLeftInfo = '<p> <div style="width: 100%; display: table;"> <div style="display: table-row">  <div style="width: 600px; display: table-cell;"> <b> The (main) Left Channel </b>    <a target="_blank" href="http://www.isaac26.com/uploads/leftside.jpg" > <img src="http://www.isaac26.com/uploads/leftside.jpg" height=225 width=300> </img>  </a>   </div> <div style="display: table-cell;">  <b> The far left channel  </b> <div>  <iframe width="350" height="198" src="https://www.youtube.com/embed/y0MflUM7vyE?rel=0&t=03s" frameborder="0" allowfullscreen></iframe></div> <div> The far left channel can generally be run at medium to high flows with some rock dodging and bracing (5+ ft on the Eddington gage). However, lower then 5ft and it becomes very difficult for larger boats to navigate down.     </div> </div> </div>  <p>';
   
   var baseRight = '<p> <div style="width: 100%; display: table;"> <div style="display: table-row">  <div style="width: 600px; display: table-cell;"> <b> The far right channel </b> <img src="http://www.isaac26.com/uploads/basinright.jpg" height=225 width=300 /> <img><div> The far right channel is in general too shallow and rocky to paddle down (flows 2-6ft on the Eddington gage). However, in the event of major rainstorm it could be a sneak route alternative (since the rest of the river would likely be very high).  </div></div> <div style="display: table-cell;"> <b> The Right Channel </b> <iframe width="300" height="174" src="https://www.youtube.com/embed/cDeSv5ykPFg?rel=0" frameborder="0" allowfullscreen></iframe> The main right channel provides many interesting lines that one can paddle at a variety of flows. The furthest right portion of the channel features a large wave train and a few holes (flow dependent). This line is generally quick and doable  at lower flows (as featured in the video above which was shot at approximately 2.7  on the Eddington gage). However as the river rises a very large wave/hole develops that would likely swamp a boat if hit directly. Further to the left are two smaller drops. These drops require maneuvering and bracing off of rocks at low water and at high water provide a good alternative to the large waves on the right.  <a target="_blank" href="http://www.isaac26.com/uploads/rightd.jpg" > <img src="http://www.isaac26.com/uploads/rightd.jpg" height=225 width=300> </a>      <div>  </div> </div> </div> </div>  <p>';
   var baseLeft = '<p> <b> The Center left </b> <b> Far left rapids </b> <p> <p> Coming soon! </p> <p> Do you have videos/photos/descriptions of the left and far left lines of Basin Rapid? Please send them to igodfried@isaac26.com. You will be credited.  </p>';
@@ -143,16 +158,10 @@ var zoom = map.getZoom();
    var legend = document.createElement('div');
         legend.id = 'legend';
         var content = [];
-        if(screen.width>420) {
-        content.push('<p> <b> USGS Eddington Gage </b></p>'); 
-      
-		content.push('<a href="http://waterdata.usgs.gov/usa/nwis/uv?01036390"> <img width="200" height="149" src="http://waterdata.usgs.gov/nwisweb/graph?site_no=01036390&parm_cd=00065"  alt="USGS Water-data graph for site 06025500" /> </img> </a> ');
-		}
-		else 
-		{
+        
 		content.push('<a href="http://waterdata.usgs.gov/usa/nwis/uv?01036390"> Gage </a>');
 		
-		}
+		
          
         legend.innerHTML = content.join('');
         legend.index = 1;
